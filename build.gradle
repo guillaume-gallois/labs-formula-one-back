@@ -23,10 +23,10 @@ apply plugin: 'com.palantir.docker'
 // end::plugin[]
 
 // This is used as the docker image prefix (org)
-group = 'springio'
+group = 'com.guillaumegallois'
 
 bootJar {
-    baseName = 'gs-spring-boot-docker'
+    baseName = 'labs-formula-one'
     version =  '0.1.0'
 }
 
