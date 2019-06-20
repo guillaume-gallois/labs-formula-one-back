@@ -6,12 +6,6 @@ The ultimate goal is to use different tools and frameworks from the open-source 
 
 This software is shitty and doesn't come with warranty whatsoever.
 
-## Tasks
- - [X] spring boot app
- - [ ] docker-compose : mysql, apis, ...
- - [ ] migrate to java 12  
- - [ ] Modules gradle : apis, java-streams
-
 ## Useful commands
 source /home/guillaume/tk/scripts/8.sh
 ### run formula_one_database
@@ -22,10 +16,12 @@ mysql -u userFormulaOne -p
 use formula_one_database;
 show tables;
 
-### run spring boot app
+### build & run spring boot app
 ./gradlew build && java -jar build/libs/labsFormulaOne-0.1.0.jar
 
-./gradlew build docker
+### build & run docker app
+./gradlew build docker --info
+ docker run -d -p 8080:8080 guillaume/labs-formula-one:latest
 
 ## Useful resources
 http://ergast.com/mrd/
