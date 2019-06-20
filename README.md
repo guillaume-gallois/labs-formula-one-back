@@ -21,7 +21,7 @@ show tables;
 
 ### build & run docker app
 ./gradlew build docker --info
- docker run -d -p 8080:8080 guillaume/labs-formula-one:latest
+docker run -p 8080:8080 guillaume/labs-formula-one:latest
 
 ## Useful resources
 http://ergast.com/mrd/
