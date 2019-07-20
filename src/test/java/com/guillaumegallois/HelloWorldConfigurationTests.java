@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package hello;
+package com.guillaumegallois;
 
 import static org.junit.Assert.*;
 
@@ -41,9 +41,9 @@ public class HelloWorldConfigurationTests {
     private TestRestTemplate restTemplate;
 
     @Test
-    public void testGreeting() throws Exception {
+    public void health() throws Exception {
         ResponseEntity<String> entity = restTemplate
-                .getForEntity("http://localhost:" + this.port + "/", String.class);
+                .getForEntity("http://localhost:" + this.port + "/health", String.class);
         assertEquals(HttpStatus.OK, entity.getStatusCode());
     }
 
